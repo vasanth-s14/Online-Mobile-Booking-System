@@ -1,0 +1,198 @@
+<html>
+<head>
+  <link rel="stylesheet" href="adp.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .active{
+    font-size: 15px;
+    }
+    p{
+        color:black;
+        font-family:fantasy;
+        font-size: 40px;
+        margin-bottom: 10px;
+        margin-left:10px;
+    }
+    body{
+        margin:0;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .topnav{
+        overflow:hidden;
+        background-color:black;
+    }
+    .topnav a{
+        float:left;
+        color:whitesmoke;
+        text-align:center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .topnav a.active{
+        color:white;
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    .topnav a.bnd{
+        color:white;
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    .topnav a.acc{
+        color:white;
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    .topnav a.abt{
+        color:white;
+        font-size: 30px;
+        padding-left: 50px;
+    }
+</style>    
+<title> mobilekart.com </title>
+</head>
+<body style="background-image: url('https://image.shutterstock.com/image-vector/mobile-phone-abstract-vector-closeup-260nw-1188009991.jpg');">
+
+
+<div>
+<p>mobile kart.</p>
+</div>
+<b>
+<div class="topnav">
+    <a class="active" href="Home%20Page.html">Home</a>
+    <span href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</span>
+    <a style="cursor:pointer" onclick="brand()" class="bnd" >Brand</a>
+    <a style="cursor:pointer;font-size:30px;margin-left:0px;" href="https://www.mobilekart.store/">Accessories</a>
+    <a href="About us.html" class="abt" target="_blank">About</a>
+	<a href="privacy.html" target="_blank" class="active">Privacy and Policies</a>
+	<a href="terms.html" target="_blank" class="active">Terms & Uses</a>
+	<a href="login.php" class="active"><img src="log1.png " style="height:50px;width:200px;"/></a>
+    </div>
+</b>   
+    <style>
+body{
+    font-family: 'Lato', sans-serif;
+    }
+
+.overlay {
+  height: 0%;
+  width:200px;
+  position: fixed;
+  top: 75px;
+  left: 140px;
+  background-color:black;
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  margin-bottom:auto;
+  margin-top:auto;
+  text-decoration: none;
+  font-size: 36px;
+  color: gray;
+  display: block;
+  transition: 0.5s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: whitesmoke;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  left: 75px;
+  font-size: 60px;
+}
+
+@media screen and (height: 200px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 15px;
+  right: 55px;{}
+}
+
+</style>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+  <a href="#">  <a href="brand2.html" target="_blank">Samsung</a></a>
+    <a href="#"> <a href="brand1.html" target="_blank">One Plus</a></a>
+    <a href="#"> <a href="brand3.html" target="_blank">Iphone</a></a>
+    <a href="#"> <a href="brand 4.html" target="_blank">Vivo</a></a>
+  </div>
+</div>
+
+<script>
+function brand() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+</script>
+
+<div class="slider" style="width:2000px;">
+  <div class="slides">
+  <input type="radio" name="radio-btn" id="radio1">
+  <input type="radio" name="radio-btn" id="radio2">
+  <input type="radio" name="radio-btn" id="radio3">
+  <input type="radio" name="radio-btn" id="radio4">
+  
+  
+  <div class="slide first">
+  <img src="Galaxy F42.jpg" style="width:2000px;">
+  </div>
+  <div class="slide">
+  <img src="Tecno.jpg" style="width:2000px;">
+  </div>
+  <div class="slide">
+  <img src="s22.jpg" style="width:2000px;">
+  </div>
+  <div class="slide" >
+  <img src="13 pro.jpg" style="width:2000px;">
+  </div>
+  
+  
+  <div class="navgivation-auto">
+  <div class="auto-btn1"></div>
+  <div class="auto-btn2"></div>
+  <div class="auto-btn3"></div>
+  <div class="auto-btn4"></div>
+  </div>
+  
+  <div class="navgivation-manual">
+  <label for="radio1" class="manual-btn"></label>
+  <label for="radio2" class="manual-btn"></label>
+  <label for="radio3" class="manual-btn"></label>
+  <label for="radio4" class="manual-btn"></label>
+  </div> </div>
+  
+  <script>
+  
+  let count=1;
+  setInterval(function(){
+  document.getElementById('radio'+count).checked=true;
+  count++;
+  if(count>4)
+  {
+  count=1;
+  }
+  },3000);
+  </script>
+</body>
+</html>

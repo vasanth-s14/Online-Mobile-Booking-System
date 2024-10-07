@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mobilekart.com</title>
+    <link rel="stylesheet" href="adp.css">
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-image: url('https://image.shutterstock.com/image-vector/mobile-phone-abstract-vector-closeup-260nw-1188009991.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        p {
+            color: black;
+            font-family: fantasy;
+            font-size: 40px;
+            margin: 10px;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: black;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .topnav a {
+            color: whitesmoke;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 1em;
+            transition: font-size 0.3s, padding-left 0.3s;
+        }
+
+        .topnav a.active,
+        .topnav a.bnd,
+        .topnav a.acc,
+        .topnav a.abt {
+            font-size: 1.2em;
+            padding-left: 20px;
+        }
+
+        .topnav a img {
+            height: 50px;
+            width: auto;
+        }
+
+        .overlay {
+            height: 0;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            overflow-y: hidden;
+            transition: 0.5s;
+            z-index: 1000;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 1.5em;
+            color: gray;
+            display: block;
+            transition: 0.5s;
+        }
+
+        .overlay a:hover,
+        .overlay a:focus {
+            color: whitesmoke;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            font-size: 2em;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Slider Styles */
+        .slider {
+            width: 100%;
+            max-width: 2000px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+        }
+
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .navgivation-auto,
+        .navgivation-manual {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .navgivation-auto div,
+        .navgivation-manual .manual-btn {
+            display: inline-block;
+            margin: 0 2px;
+            cursor: pointer;
+        }
+
+        .navgivation-auto div {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            height: 10px;
+            width: 10px;
+        }
+
+        .navgivation-manual .manual-btn {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            height: 10px;
+            width: 10px;
+            cursor: pointer;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .topnav a {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .overlay a {
+                font-size: 1.2em;
+            }
+
+            .slider {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>mobile kart.</p>
+    </div>
+
+    <div class="topnav">
+        <a class="active" href="file:///E:/Project/Home%20Page.html">Home</a>
+        <span class="closebtn" onclick="closeNav()">&times;</span>
+        <a class="bnd" onclick="brand()">Brand</a>
+        <a class="acc" href="https://www.mobilekart.store/">Accessories</a>
+        <a class="abt" href="About us.html" target="_blank">About</a>
+        <a href="privacy.html" target="_blank" class="active">Privacy and Policies</a>
+        <a href="terms.html" target="_blank" class="active">Terms & Uses</a>
+        <a href="login.php" class="active"><img src="log1.png" alt="Login"/></a>
+    </div>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="brand2.html" target="_blank">Samsung</a>
+            <a href="brand1.html" target="_blank">One Plus</a>
+            <a href="brand3.html" target="_blank">Iphone</a>
+            <a href="brand4.html" target="_blank">Vivo</a>
+        </div>
+    </div>
+
+    <script>
+        function brand() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0";
+        }
+    </script>
+
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <div class="slide first">
+                <img src="Galaxy F42.jpg" alt="Galaxy F42">
+            </div>
+            <div class="slide">
+                <img src="Tecno.jpg" alt="Tecno">
+            </div>
+            <div class="slide">
+                <img src="s22.jpg" alt="S22">
+            </div>
+            <div class="slide">
+                <img src="13 pro.jpg" alt="13 Pro">
+            </div>
+
+            <div class="navgivation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+
+            <div class="navgivation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let count = 1;
+        setInterval(function() {
+            document.getElementById('radio' + count).checked = true;
+            count++;
+            if (count > 4) {
+                count = 1;
+            }
+        }, 3000);
+    </script>
+</body>
+</html>
